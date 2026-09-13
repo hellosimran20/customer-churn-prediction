@@ -2,19 +2,13 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-
-# -----------------------------------
 # Load trained model
-# -----------------------------------
 
 model = joblib.load(
     "models/customer_churn_model.pkl"
 )
 
-
-# -----------------------------------
 # Page configuration
-# -----------------------------------
 
 st.set_page_config(
     page_title="Customer Churn Predictor",
@@ -22,10 +16,7 @@ st.set_page_config(
     layout="centered"
 )
 
-
-# -----------------------------------
 # Title
-# -----------------------------------
 
 st.title("📊 Customer Churn Prediction")
 
@@ -34,10 +25,7 @@ st.write(
     "whether the customer is likely to churn."
 )
 
-
-# -----------------------------------
 # Customer Information
-# -----------------------------------
 
 st.header("Customer Information")
 
@@ -200,12 +188,10 @@ total_charges = st.number_input(
     value=1000.0
 )
 
-
-# -----------------------------------
 # Prediction Button
-# -----------------------------------
 
-if st.button("🔮 Predict Churn"):
+
+if st.button("Predict Churn"):
 
     customer_data = pd.DataFrame({
         "gender": [gender],
@@ -236,19 +222,16 @@ if st.button("🔮 Predict Churn"):
         customer_data
     )
 
-
-    # -----------------------------------
     # Display Result
-    # -----------------------------------
 
     if prediction[0] == 1:
 
         st.error(
-            "⚠️ The customer is likely to churn."
+            "The customer is likely to churn."
         )
 
     else:
 
         st.success(
-            "✅ The customer is likely to stay."
+            "The customer is likely to stay."
         )
