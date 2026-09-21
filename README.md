@@ -35,13 +35,13 @@ Forest models, with a Streamlit web app for real-time predictions.
 - Random Forest
 
 ##  Results
-| Model               | Accuracy | Precision | Recall  | F1-score |-
-|---------------------|----------|-----------|---------|----------|-
-| Logistic Regression | [0.802416] [0.602094] [0.614973] [0.608466]      
-| Decision Tree       | [0.789623] [0.644578] [0.572193] [0.606232]      
-| Random Forest       | [0.792466] [0.637584] [0.508021] [0.565476]
+| Model               | Accuracy | Precision | Recall   | F1-score |-
+|---------------------|----------|-----------|----------|----------|-
+| Logistic Regression |[0.802416]|[0.602094] |[0.614973]|[0.608466]|      
+| Decision Tree       |[0.789623]|[0.644578] |[0.572193]|[0.606232]|     
+| Random Forest       |[0.792466]|[0.637584] |[0.508021]|[0.565476]|
 
-- Best model: [   ], saved as `models/customer_churn_model.pkl`
+- Best model: [Random Forest], saved as `models/customer_churn_model.pkl`
 
 ##  Web App (Streamlit)
 - `app.py` loads the saved model and provides a form for entering customer details.
